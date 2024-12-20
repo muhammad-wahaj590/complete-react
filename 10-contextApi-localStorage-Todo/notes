@@ -1,0 +1,61 @@
+Redux: redux apny aap pe ek independent state management library hai 
+react-redux: redux to ek core library hai lkn agar aap redux ko react k project main use karna chahty to apko react-redux use karna hoga jo k ek bridge k tor pe hota dono k darmiyan 
+- yeh ek independent library hai
+
+
+- problem yeh thi k jab hamen inner component main prop pass karna tha to us k parent se pass hoty hoye inner tak woh component jata tha to is ko solve karne k liye hamne use kia Context Api ko
+
+Context Api: is main yeh hota k sari cheezen ek center main store karlo (globally) jis ko jo cheez chahiye woh hook se lelo matlab ham use name se koi hook bana lety or context dedety thy k hamen yeh context use karna hai or Provider se wrap kardete thy
+
+redux is k bhi baad main aya is pehlay tha Flux
+
+Flux: is k andar data flow main kafi dehan dia 
+
+Redux: redux aya or chala lkn is main phr kuch issues any lagy to us k bad aya redux-toolkit
+
+Redux-Toolkit: yeh tha battery included matlab bht sara setup karne ki zaroorat nhi simple sa flow de raah hun or kafi cheez main internally manage kar raha hun 
+- is main abstraction ziada hai redux-toolkit k andar 
+- is main apko store banany ka bht hi easy tareeqa milta hai 
+- inhone yeh bhi introduce kia k aap reducers ko kese rakho 
+
+
+----- Concept of Redux and Redux toolkit -------
+
+Store: store banaty jahan se aap single surce of tool se lelety | isko global variable type bhi keh sakty 
+- is k andar mini store bhi ho sakty hain | store to ek hi hota hai lkn is main mini portions ho sakty hain 
+
+Reducer: agar hamen store main kuch bhi change karna hai, konsay store matlab auth store, product store etc to us k liye ham reducer ko use karty | functionality wala part reducers() se hi jata hai | reducer ek object hai 
+
+ ------ 2 methods -------
+ 1: useSelector: jab koi value select karni ho store main se 
+ 2: useDispatch: jab koi value bhejni hai 
+
+ ---- store making steps ------
+ sab s eephaly src main ek folder app k name se banao phr us main store.js ki file banao  
+Process: 
+step: 1)
+ - sab se pehlay configureStore le kar ana hai redux-toolkit se 
+ - ab ek variable store bany ga or usy export kardo configureStore k sath or us main objectpass kardo 
+ 
+ step: 2)
+ - ab ham banayen ge apny reducers (redux toolkit main jo reducer banta hai woh thora sa different hai ham usy kehty hain slices lkn naam main kuch nhi rakha ham uski naming convention redux toolkit ki hi use karen ge)
+ - ab src main ek folder banaya features k name se or us main alag alag features de sakty 
+ - hamne fileName k last main slice.js likha is s ekuch khaas hota nhi hai show karwana k hamne redux-toolkit use kia hai 
+ - ab ham 2 method use karen ge jo slice bana dega wese ek se bhi ho sakta hai lkn ham do use karen geor us k peechay ki reason bhi apko batadengy abhi (createSlice from redux-toolkit) or dosra nanoid from redux-toolkit (iska kaam bas unique id introduce karna hai) hamara main aam createSlice method se ho gaya hai 
+ - store main sab se pehlay imp cheez hoti hai initial state matlab store starting main kese dikhay ga eg empty hoga, database s ekoi value fetch kar k dalo ge , koi value dalo ge etc to us k liye banaty hain initialState (initialState array bhi ho sakti hai or object bhi ho sakti hai , objet rakhne se us main multiple cheezen asakti hain)
+
+ step: 3)
+ - ab ham slice banayen ge jo k reducer ka hi bara version hai or reducer ek functionality hai 
+ - name: ab hamen slices k name rakhne hongy or yeh name redux toolkit main jab ham use karen ge chrome extension ka to wahan yehi name show hoga 
+ - initialState: har slice ka ek initialState hota hai 
+ - reducers: ab reducers jo k ek object hi hai or us amin ati hai properties or function (ab agar function kahin or declare kia ho to usy property k agy sif refrence de sakty hain, call nhi kar sakty) ya phr reducer k andar hi propeerty k agy hi function likhdo
+
+ - redux or context api main yeh farq hai k context main function ka declaration karty thy sirf, or redux main declaration or body dono banayi jati ,yah banaty to declaration k sath body bhi banaty lkn context main sirf declaration hoti 
+
+ - function main do cheezon ka access hamesha rahy ga ek to state or dosra action 
+   - state: yeh karta k abhi initial state main kia kia value hai uska access degi
+   - action: jab koi value aye to woh value kahan se mily gi ? woh values action se milen gi 
+
+
+
+   

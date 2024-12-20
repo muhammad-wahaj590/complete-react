@@ -1,0 +1,10 @@
+ham jab ek component banaty or us main hamen value chahiye hoti parent component se lkn parent components se direct avlue accesible nhi hai to ham parent to parent woh value mangwaty or phr us value ko access kar paty to yeh ek optimizing way nhi hai or lkn react ka flow esi hi hai isko optimize way main lany k liye ham ne ek global file banany ka socha or us main object bana dia or wahan se us value ko access karlia to ham parents se value nhi mangwani pare gi or hamara raita itnza ziada nhi phelay ga props pe 
+to is k liye hota hai solve karne k liye context api lkn yeh akele nhi ahi is k sath or bhi libraries hain 
+
+CONTECT API: yeh pure exist karta react main us se bahar exist nhi karta hai 
+
+lkn sirf problem react main nhi hoti or bhi frameworks main hoti to us k liye ata hai REDUX
+
+REDUX: yeh bhi exact same problem ko solve karti hai | is ka kaam hota k states ko manage karna 
+
+react main karana hai to react-redux hota or ek easy version bhi hai woh hai redux-toolkit
